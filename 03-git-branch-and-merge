@@ -1,0 +1,105 @@
+1. What does git clean do?
+    Git clean pada kasus tertentu sama seperti perintah untuk undo. 
+    Git clean juga dianggap melengkapi perintah lain seperti git reset dan git checkout. 
+    Pada penggunaannya, git clean dapat beroperasi pada file yang tidak terlacak. 
+    File tidak telacak yaitu file yang telah dibuat dalam direktori kerja repo namun belum 
+    ditambahkan ke indeks pelacakan repositori dengan perintah git add.
+
+        Contoh kasus : 
+
+        $ mkdir git_clean_test
+        $ cd git_clean_test/
+        $ git init .
+        Initialized empty Git repository in /Users/kev/code/git_clean_test/.git/
+        $ echo "tracked" > ./tracked_file
+        $ git add ./tracked_file
+        $ echo "untracked" > ./untracked_file
+        $ mkdir ./untracked_dir && touch ./untracked_dir/file
+        $ git status
+        On branch master
+
+        Initial commit
+
+        Changes to be committed: (use "git rm --cached <file>..." to unstage)
+
+        new file: tracked_file
+
+        Untracked files: (use "git add <file>..." to include in what will be committed) untracked_dir/ untracked_file
+
+        contoh diatas membuat repositori Git baru di direktori git_clean_test. 
+        Kemudian dilanjutkan dengan membuat tracked_file yang ditambahkan ke indeks Git, 
+        selain itu, untracked_file dibuat, dan untracked_dir. Contoh kemudian memanggil 
+        status git yang menampilkan output yang menunjukkan status internal Git dari perubahan 
+        terlacak dan tidak terlacak. Dengan repositori dalam keadaan ini, kita dapat menjalankan 
+        perintah git clean untuk menunjukkan tujuan yang dimaksudkan.
+
+2. What do the -d and -f flags for git clean do?
+        
+        -f or ---force
+        Force sebenarnya menghapus file yang tidak terlacak dari direktori saat ini. Force hanya diperlukan jika 
+        clean.requireForce disetel ke false. Sehingga tidak akan menghapus folder maupun file yang tidak terlacak yang 
+        ditentukan oleh .gitignore. 
+
+        -d 
+        Opsi -d memberi tahu git clean bahwa kita juga ingin menghapus direktori yang tidak terlacak, secara default ia akan 
+        mengabaikan direktori. git clean tidak akan muncul kembali ke direktori yang tidak terlacak untuk menghindari penghapusan 
+        terlalu banyak. Jika ada jalur yang ditentukan, -d tidak relevan; semua file yang tidak terlacak yang cocok dengan jalur yang 
+        ditentukan (dengan pengecualian untuk direktori git yang berada di bawah --force) akan dihapus.
+
+3. What git command creates a branch?
+
+        Untuk  membuat cabang (branch) kita dapat lakukan dengan dua cara yakni 
+        - git branch <nama-branch-baru>
+            cara ini dapat dilakukan dengan menambahkan nama branchbaru yang ingin dibuat setelah menuliskan kode git branch
+        - git checkout -b <nama-branch-baru>
+            pada cara kedua ini, kita dapat membuat branch baru sekaligus langsung masuk ke dalam branch. Hal ini karena
+            kita menggabungkan antara fungsi checkout (digunakan untuk berpindah branch) dan git branch yaitu dengan menambah
+            kode -b.
+            cara kedua tentu lebih praktis jika kita ingin langsung meuju ke branch yang telah kita buat.
+
+4. What is the difference between a fast-forward and recursive merge?
+
+        Merge commit memiliki 2 parents. Dengan fast forward kita akan memiliki arah garis yang sejajar. Sedangkan dengan penggabungan 
+        recursive merge akan ada beberapa baris.
+        - fast forward dapat terjadi ketika ada jalur linier dari ujung cabang saat ini ke cabang target. 
+        - recursive adalah strategi penggabungan default saat menarik atau menggabungkan satu cabang. selain itu, recursive juga dapat 
+         mendeteksi dan menangani penggabungan yang melibatkan penggantian nama, tetapi saat ini tidak dapat menggunakan salinan yang 
+         terdeteksi. Ini adalah strategi penggabungan default saat menarik atau menggabungkan satu cabang.
+
+5. What git command changes to another branch?
+        untuk berpindah ke cabang lain kita dapat menggunakan perintah :
+        $ git checkout <nama-branch-tujuan>
+
+        kita hanya perlu menulis kode diatas dan menambahkan nama branch tujuan kita.
+
+6. How do you remove modified or deleted files from the working directory?
+        untuk menghapus working directory kita hanya perlu menambahkan perintah :
+        $ rm <nama-file-yang-ingin-dihapus>
+
+        jika file sudah di commit maka kita harus melakukan git add dan git commit lagi untuk perubahan yang telah dilakukan.
+
+7. What git command deletes a branch?
+        untuk menghapus branch ada beberapa cara tergantung dari case-nya
+        - git branch -d <branch_name>  Opsi ini mengharuskan branch sebelum dihapus harus ter-update dahulu dengan remote branch 
+          yang ada di repositori kita.
+        - git branch -D <branch_name> Hapus branch lokal komputer git tanpa peduli status apakah sudah sama dengan remote branch
+          yang ada di repositori
+        - git push -d <remote_name> <branch_name> Hapus remote branch dapat menggunakan opsi git push -d. Perintah ini akan membuat 
+          remote branch yang ada pada repositori kita, misal di Github, akan terhapus.
+          
+8. What does the git diff command do?
+        perintah git diff menunjukkan perbedaan antara file dalam dua komit atau antara repositori Anda saat ini dan komit sebelumnya. 
+        Perintah ini menampilkan perubahan yang ditunjukkan dengan header dan metadata untuk file yang telah diubah.
+
+9. How do you remove files from the staging area?
+        untuk menghapus file dari staging area kita dapat menggunakan perintah 
+        - git reset
+        
+
+10. How do merge conflicts happen?
+        Konflik gabungan adalah peristiwa yang terjadi ketika Git tidak dapat secara otomatis menyelesaikan perbedaan kode antara dua 
+        komit. Namun, ketika ada perubahan yang bertentangan pada baris yang sama, "konflik gabungan" terjadi karena Git tidak tahu 
+        kode mana yang harus disimpan dan mana yang harus dibuang.
+
+
+

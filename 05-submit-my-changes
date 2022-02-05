@@ -1,0 +1,217 @@
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ mkdir tugas-git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ cd tugas-git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ touch submit-my-changes.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git
+$ git clone https://github.com/impactbyte/tech4impact-students-bio.git
+Cloning into 'tech4impact-students-bio'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+<!-- new -->
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ mkdir tugas-git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ cd tugas-git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git
+$ touch submit-my-changes
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git
+$ git clone https://github.com/LilaFadilah99/tech4impact-students-bio.git
+Cloning into 'tech4impact-students-bio'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git
+$ git init .
+Initialized empty Git repository in C:/Users/USER/Desktop/tugas-git/.git/
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git add .
+warning: adding embedded git repository: tech4impact-students-bio
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> tech4impact-students-bio
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached tech4impact-students-bio
+hint:
+hint: See "git help submodule" for more information.
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git commit -m "menambahkan hasil clone"
+[master (root-commit) 068d429] menambahkan hasil clone
+ 2 files changed, 1 insertion(+)
+ create mode 100644 submit-my-changes
+ create mode 160000 tech4impact-students-bio
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git branch lila-fadilah
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git checkout lila-fadilah
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ touch 
+
+<!-- fix -->
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ mkdir tugas-git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop
+$ cd tugas-git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git
+$ git clone https://github.com/LilaFadilah99/tech4impact-students-bio.git
+Cloning into 'tech4impact-students-bio'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git
+$ git init .
+Initialized empty Git repository in C:/Users/USER/Desktop/tugas-git/.git/
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git add .
+warning: adding embedded git repository: tech4impact-students-bio
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> tech4impact-students-bio
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached tech4impact-students-bio
+hint:
+hint: See "git help submodule" for more information.
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git commit -m "menambahkan file clone"
+[master (root-commit) 297e0e4] menambahkan file clone
+ 1 file changed, 1 insertion(+)
+ create mode 160000 tech4impact-students-bio
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git branch lila-fadilah
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git checkout lila-fadilah
+Switched to branch 'lila-fadilah'
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (lila-fadilah)
+$ touch lilafadilah.md
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (lila-fadilah)
+$ echo -e "Nama Lengkap : Lila Fadilah \nUmur : 22 \nPesan yang ingin disampaikan : Semangat untuk kamu yang disana sedang berjuang" > lilafadilah.md
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (lila-fadilah)
+$ cat lilafadilah.md
+Nama Lengkap : Lila Fadilah
+Umur : 22
+Pesan yang ingin disampaikan : Semangat untuk kamu yang disana sedang berjuang
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (lila-fadilah)
+$ git add .
+warning: LF will be replaced by CRLF in lilafadilah.md.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (lila-fadilah)
+$ git commit -m "lilafadilah.md"
+[lila-fadilah 6954c95] lilafadilah.md
+ 1 file changed, 3 insertions(+)
+ create mode 100644 lilafadilah.md
+
+ USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git merge lila-fadilah
+Updating 297e0e4..6954c95
+Fast-forward
+ lilafadilah.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 lilafadilah.md
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git remote add origin https://github.com/LilaFadilah99/tugas-git.git
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git branch -M master
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git (master)
+$ git push -u origin master
+
+
+
+//MELAKUKAN PULL REQUEST SETELAH MELAKUKAN PERUBAHAN PADA FILE HASIL FORK YANG SUDAH DI CLONE //
+
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git/tech4impact-students-bio (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   davidwinald.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git/tech4impact-students-bio (master)
+$ git add .
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git/tech4impact-students-bio (master)
+$ git commit -m "menambahkan isi teks"
+[master f11da41] menambahkan isi teks
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+$ git branch lila-fadilah
+
+USER@DESKTOP-FOP2BSV MINGW64 ~/Desktop/tugas-git/tech4impact-students-bio (master)
+$ git checkout lila-fadilah
+Switched to branch 'lila-fadilah'
+
+$ git push origin lila-fadilah
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'lila-fadilah' on GitHub by visiting:
+remote:      https://github.com/LilaFadilah99/tech4impact-students-bio/pull/new/lila-fadilah
+remote:
+To https://github.com/LilaFadilah99/tech4impact-students-bio.git
+ * [new branch]      lila-fadilah -> lila-fadilah
+
+
+
+
+
+
+
+

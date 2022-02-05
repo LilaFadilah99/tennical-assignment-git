@@ -1,0 +1,130 @@
+USER@DESKTOP-FOP2BSV MINGW64 /c
+$ mkdir Lila-Fadilah
+
+USER@DESKTOP-FOP2BSV MINGW64 /c
+$ cd lila-fadilah
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah
+$ touch readme.md
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah
+$ echo "Halo perkenalkan aku halaman utama" > readme.md
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah
+$ git init .
+Initialized empty Git repository in C:/Lila-Fadilah/.git/
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git add .
+warning: LF will be replaced by CRLF in readme.md.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git commit -m "Inisialiasasi Git Repository"
+[master (root-commit) a83f2dd] Inisialiasasi Git Repository
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git branch cv
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git checkout cv
+Switched to branch 'cv'
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ touch cv.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ echo "Ini adalah file CV" > cv.txt
+
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git commit -m "Inisialisasi CV"
+[cv 5e2c5fd] Inisialisasi CV
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cv.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ echo "Shopee" > cv.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git commit -m "menambahkan perusahaan pertama"
+[cv a832805] menambahkan perusahaan pertama
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ echo "Tokopedia" > cv.txt
+
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git commit -m "menambahkan perusahaan kedua"
+[cv d3a2af6] menambahkan perusahaan kedua
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ echo "Tik-Tok" > cv.txt
+
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git add .
+warning: LF will be replaced by CRLF in cv.txt.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git commit -m "menambahkan perusahaan 3"
+[cv e261aa0] menambahkan perusahaan 3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (cv)
+$ git checkout master
+Switched to branch 'master'
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ echo -e 'Halo perkenalkan aku halaman utama \n\nIni adalah update pertama pada branch master' > readme.md
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git add .
+warning: LF will be replaced by CRLF in readme.md.
+The file will have its original line endings in your working directory
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git commit -m "update master pertama"
+[master 508cd8c] update master pertama
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git merge cv
+Merge made by the 'ort' strategy.
+ cv.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cv.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git remote add origin https://github.com/LilaFadilah99/Lila-fadilah.git
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (master)
+$ git branch -M main
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/lila-fadilah (main)
+$ git push -u origin main
+
+
+
+

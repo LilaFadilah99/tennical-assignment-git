@@ -1,0 +1,75 @@
+
+USER@DESKTOP-FOP2BSV MINGW64 /c
+$ mkdir git-basic
+
+USER@DESKTOP-FOP2BSV MINGW64 /c
+$ cd git-basic
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic
+$ touch first.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic
+$ git init .
+Initialized empty Git repository in C:/git-basic/.git/
+bash: /mingw64/bin/git: Device or resource busy
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git add .
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git commit -m "adding first.txt"
+[master (root-commit) 64e603c] adding first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git log
+commit 64e603cb8346b3217d50a4f57ce5e72331be3145 (HEAD -> master)
+Author: Lila Fadilah <lilafadila64@gmail.com>
+Date:   Fri Feb 4 05:53:24 2022 +0700
+
+    adding first.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ touch second.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git add .
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git commit -m "adding second.txt"
+[master b1834e9] adding second.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ rm first.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git add .
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git commit -m "removing first.txt"
+[master d9d4455] removing first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 first.txt
+
+USER@DESKTOP-FOP2BSV MINGW64 /c/git-basic (master)
+$ git log
+commit d9d4455d1baa4bc59f09b96c78a799f2a1a2b5ed (HEAD -> master)
+Author: Lila Fadilah <lilafadila64@gmail.com>
+Date:   Fri Feb 4 05:56:03 2022 +0700
+
+    removing first.txt
+
+commit b1834e9f38347896f97ffae97d38847e03e1c8fe
+Author: Lila Fadilah <lilafadila64@gmail.com>
+Date:   Fri Feb 4 05:54:52 2022 +0700
+
+    adding second.txt
+
+commit 64e603cb8346b3217d50a4f57ce5e72331be3145
+Author: Lila Fadilah <lilafadila64@gmail.com>
+Date:   Fri Feb 4 05:53:24 2022 +0700
+
+    adding first.txt
